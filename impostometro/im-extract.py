@@ -1,7 +1,6 @@
 import pandas as pd
 import calendar as cd
 import requests as rq
-import os
 
 # Read cities.csv into a list
 
@@ -10,7 +9,7 @@ import os
 
 # IMPORTANT start from the inside of the loop
 # Loop through cities list
-    # Loop through AAAA-MM
+    # Loop through AAAA-MM (from 2004-01-DD to 2020-03-DD)
         # For the GET request: use interval from 01 to lastday = cd.monthrange(2010, 1)[1]
         # Send GET request to site via requests
         # Read json string to a dataframe pd.read_json(contents)
