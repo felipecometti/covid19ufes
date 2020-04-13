@@ -20,3 +20,4 @@ if get_date not in df_file['Data'].tolist():
     df_file.to_excel("CasosBairros.xlsx", sheet_name="Casos Bairros", index=False)
 else:
     print("A data já está na tabela.")
+    input("Press enter to continue...")
