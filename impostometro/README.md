@@ -30,3 +30,14 @@ So we seem to have everything set to get over those obstacles.
 * Pandas lib
 * Requests lib
 * Simple file manipulation
+
+# Impostometro Stage 2
+
+## Goal
+
+It's simple, just need to correct the values for inflation.
+
+### Tools
+
+* Slightly more complex file manipulation
+* Maybe I'll test pandas' performance, the 'im-extract.py' output has 15k lines

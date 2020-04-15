@@ -20,7 +20,8 @@ Number of cases evolution map.
 
 Extracting tax collection historical data from the impostometro.com.br website.
 
-* Progress: 10%
+* Extraction: 98% (just need to clean the debugging mess from the final code)
+* Inflation correction: 0%
 
 ### /nbhdcases/
 
