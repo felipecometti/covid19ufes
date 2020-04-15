@@ -31,6 +31,10 @@ So we seem to have everything set to get over those obstacles.
 * Requests lib
 * Simple file manipulation
 
+## Interesting findings
+
+I'll comment about a requests' issue with GET in a future update to this readme.
+
 # Impostometro Stage 2
 
 ## Goal
