@@ -14,7 +14,7 @@ city_names = city_df['Município'].tolist()
 f = open("im_es.csv", "a", encoding="utf8")
 log = open("log.txt", "a")
 
-log.write("==============================\n" + str(dt.datetime.now()) + "\n")
+log.write("start=========================\n" + str(dt.datetime.now()) + "\n")
 #count_cities = 3
 
 # Loop through cities list
@@ -53,8 +53,10 @@ for x in range(0, count_cities):
     time_delta = dt.datetime.now() - time_delta
     log.write(str(x + 1) + "/" + str(count_cities) + " " + str(year) + \
         " " + str(month) + " " + str(time_delta) + "\n")
-f.close()
-log.write(str(dt.datetime.now()) + "\n" + "==============================\n")
-log.close()
+    f.close()
+    log.close()
+    f = open("im_es.csv", "a", encoding="utf8")
+    log = open("log.txt", "a")
+log.write(str(dt.datetime.now()) + "\n" + "end===========================\n")
 print("\nDone.")
 input("Press enter to continue...")
