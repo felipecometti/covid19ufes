@@ -40,11 +40,15 @@ url as a string and sending it directly to 'rq.get(url)'.
 
 It went from 21s/request to 0.5s/request.
 
-The problem is probably in parsing those parameters. I tried to look into the
-source for Requests a little but everything seemed normal.
+~~The problem is probably in parsing those parameters. I tried to look into the~~
+~~source for Requests a little but everything seemed normal.~~
 
-Well, such is life with it's misteries. Point is that it's better to use string
-operations to build the url if you want to make a lot of GET requests.
+~~Well, such is life with it's misteries. Point is that it's better to use string~~
+~~operations to build the url if you want to make a lot of GET requests.~~
+
+Turns out it's server-side, the 'rq.get(url)' solution is taking 35s/request now.
+I'll check my connection and try it another day to see if they're blocking the
+script, type of request, user agent, IP or something...
 
 # Impostometro Stage 2
 
