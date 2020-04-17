@@ -1,5 +1,9 @@
+# nbhdcases output
 CasosBairros.xlsx
+# impostometro output
 im_es.csv
-covid19.csv
+# casesmap srcs and outputs
+caso_full.csv
 municipios.csv
 covid19randloc.csv
+*.png
