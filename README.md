@@ -10,11 +10,11 @@ solution for the visuals.
 
 * Progress: 0%
 
-### /datashader/
+### /casesmap/
 
-Number of cases evolution map.
+An animated map showing the evolution in number of cases.
 
-* Progress: 0%
+* Progress: 10%
 
 ### /impostometro/
 
