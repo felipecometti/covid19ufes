@@ -12,8 +12,9 @@ city_names = city_df['Município'].tolist()
 
 # Open file where the data will be stored
 f = open("im_es.csv", "a", encoding="utf8")
-log = open("log.txt", "a")
 
+# Log and test variable
+log = open("log.txt", "a")
 log.write("start=========================\n" + str(dt.datetime.now()) + "\n")
 #count_cities = 3
 
@@ -31,19 +32,11 @@ for x in range(0, count_cities):
             url = url + str(city) + "&dataInicial="
             url = url + str(dt.date(year, month, 1).strftime("%d/%m/%Y")) + "&dataFinal="
             url = url + str(dt.date(year, month, cd.monthrange(year, month)[1]).strftime("%d/%m/%Y"))
-            #getprs = {
-            #    "estado": "es",
-            #    "municipio": city,
-            #    "dataInicial": dt.date(year, month, 1).strftime("%d/%m/%Y"),
-            #    "dataFinal": dt.date(year, month, cd.monthrange(year, month)[1]).strftime("%d/%m/%Y")
-            #}
-            #contents = rq.get(url, params=getprs)
             contents = rq.get(url)
             contents = contents.text
             page_content = eval(contents)
             # write to file a line as AAAA-MM-01,<Valor>\n
             f.write(str(dt.date(year, month, 1).strftime("%d/%m/%Y")) + "," + \
-            #f.write(str(getprs['dataInicial']) + "," + \
                 city_name + "," + \
                 str(page_content['Valor']) + "\n")
             print(str(x + 1) + "/" + str(count_cities), year, month, \
@@ -53,6 +46,8 @@ for x in range(0, count_cities):
     time_delta = dt.datetime.now() - time_delta
     log.write(str(x + 1) + "/" + str(count_cities) + " " + str(year) + \
         " " + str(month) + " " + str(time_delta) + "\n")
+
+    # Closes and reopen files so progress gets saved
     f.close()
     log.close()
     f = open("im_es.csv", "a", encoding="utf8")

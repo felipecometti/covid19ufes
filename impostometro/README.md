@@ -31,9 +31,20 @@ So we seem to have everything set to get over those obstacles.
 * Requests lib
 * Simple file manipulation
 
-## Interesting findings
+## Findings
 
-I'll comment about a requests' issue with GET in a future update to this readme.
+So I've found an issue with requests' get() function when passing the parameters
+as a variable, as in 'rq.get(url, params='list')'. Requests becomes really slow
+for some reason. It was taking a lot of time, so I ended up just building the
+url as a string and sending it directly to 'rq.get(url)'.
+
+It went from 21s/request to 0.5s/request.
+
+The problem is probably in parsing those parameters. I tried to look into the
+source for Requests a little but everything seemed normal.
+
+Well, such is life with it's misteries. Point is that it's better to use string
+operations to build the url if you want to make a lot of GET requests.
 
 # Impostometro Stage 2
 
