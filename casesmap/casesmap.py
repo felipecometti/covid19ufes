@@ -5,14 +5,21 @@ from matplotlib import colors
 
 # Variables to mess with
 the_bins = 200
-the_cmap = "gist_heat" # "Reds" for light background
+the_cmap = "Reds" # "Reds" for light, "gist_heat" for dark
 
 # Load caso_full.csv
 cases = pd.read_csv("caso_full.csv", usecols=['city_ibge_code', 'date',\
     'last_available_confirmed', 'place_type'])
 cases = cases[cases['place_type'] == "city"]
-the_vmax = cases.loc[cases['last_available_confirmed'].idxmax()]
-the_vmax = the_vmax.last_available_confirmed
+
+# Vmax
+# Vmax as the maximum number of cases
+#the_vmax = cases.loc[cases['last_available_confirmed'].idxmax()]
+#the_vmax = the_vmax.last_available_confirmed
+# Vmax as the average number of cases of the last date available
+last_date = cases['date'].iloc[-1]
+the_vmax = cases[cases['date'] == last_date]
+the_vmax = the_vmax['last_available_confirmed'].mean()
 
 # Load municipios.csv
 cities = pd.read_csv("municipios.csv", usecols=['codigo_ibge', 'latitude', 'longitude'])
@@ -38,7 +45,10 @@ for the_date in dates:
         cmap=the_cmap, weights=the_weights)
     plt.xlim(-75.2, -28.75)
     plt.ylim(-34.1, 5.6)
-    plt.gca().set_facecolor('#000000')
+    if the_cmap == "Reds":
+        plt.gca().set_facecolor('#FFF5F0')
+    else:
+        plt.gca().set_facecolor('#000000')
     plt.gca().set_aspect('equal', adjustable='box')
     plt.gca().axes.xaxis.set_visible(False)
     plt.gca().axes.yaxis.set_visible(False)
