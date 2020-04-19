@@ -3,18 +3,13 @@ Efforts for Covid19 prevention and mitigation on the brazilian state of Espirito
 
 ## Directories
 
-### /bokeh/
-
-Me trying to do something useful with it. Maybe we're going for an HTML/js based
-solution for the visuals.
-
-* Progress: 0%
-
 ### /casesmap/
 
-An animated map showing the evolution in number of cases.
+An animated map showing the evolution in number of cases in Brazil.
 
-* Progress: 10%
+* Progress: 100%
+
+![](https://media.giphy.com/media/gKrx2mmH1WkTeIlRZt/giphy.gif)
 
 ### /impostometro/
 
@@ -31,3 +26,10 @@ Exported to an excel file.
 
 * Semiautomatic: 100%
 * Automatic: ??%
+
+### /bokeh/
+
+Me trying to do something useful with it. Maybe we're going for an HTML/js based
+solution for the visuals.
+
+* Progress: 0%
