@@ -1,2 +1,8 @@
-# covid19ufes
-Efforts for Covid19 prevention and mitigation on the brazilian state of Espirito Santo
+# Cases Map
+
+I'll write this later
+
+Datasets used:
+
+* Brasil<span>.io: [caso_full.csv](https://data.brasil.io/dataset/covid19/_meta/list.html)
+* Kelvins' github: [municipios.csv](https://github.com/kelvins/Municipios-Brasileiros)
