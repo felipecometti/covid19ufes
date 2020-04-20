@@ -15,7 +15,7 @@ An animated map showing the evolution in number of cases in Brazil.
 
 Extracting tax collection historical data from the impostometro.com.br website.
 
-* Extraction: 98% (just need to clean the debugging mess from the final code)
+* Extraction: 100%
 * Inflation correction: 0%
 
 ### /nbhdcases/
@@ -25,11 +25,14 @@ of the state of Espirito Santo. To be crossed in the future with data form IBGE.
 Exported to an excel file.
 
 * Semiautomatic: 100%
-* Automatic: ??%
 
-### /bokeh/
+Made obsolete due to government making a csv directly available for download.
 
-Me trying to do something useful with it. Maybe we're going for an HTML/js based
-solution for the visuals.
+## Up next
 
-* Progress: 0%
+### /esmap/
+
+Same thing as '/casesmap/' but only for the state of Espirito Santo this time.
+
+Slightly more difficult because I haven't found a relationship table with the
+geolocation of all the neighbourhoods in the state yet.
