@@ -7,3 +7,5 @@ caso_full.csv
 municipios.csv
 *.png
 *.psd
+# esmap
+googleapi.csv
