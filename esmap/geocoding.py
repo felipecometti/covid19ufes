@@ -11,7 +11,7 @@ df_nbhd = pd.read_csv("nbhd.csv")
 total_nbhd = len(df_nbhd.index)
 
 for x in range(0, total_nbhd):
-    location = df_nbhd['M+B'].iloc[x]
+    location = df_nbhd['MB'].iloc[x]
     print(x, location)
     request = gmaps.geocode(location)
     df_nbhd.loc[df_nbhd.index[x], 'latitude'] = request[0]['geometry']['location']['lat']
